@@ -34,4 +34,14 @@ marinaBaySands.bindPopup(`
      integrated resort fronting Marina Bay in Singapore and a landmark of the city.
       At its opening in 2010, it was deemed the world's most expensive
        standalone casino property at S$8 billion</p>
-    `)
+    `);
+
+const circle = L.circle([1.3586, 103.9899], {
+    radius: 500,
+    color: "red",
+    fillOpacity: 0.5,
+    fillColor:"yellow"
+});
+
+// add the circle to the map
+circle.addTo(map);
