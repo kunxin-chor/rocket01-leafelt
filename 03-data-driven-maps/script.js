@@ -81,3 +81,17 @@ const overlays = {
 }
 
 L.control.layers(baseLayers, overlays).addTo(map);
+
+// street map is in the default layer
+document.querySelector("#streetMapBtn")
+        .addEventListener("click", function(){
+            // remove the stadia map
+            map.removeLayer(stadiaLayer);
+            map.addLayer(defaultLayer)
+        });
+
+document.querySelector("#topoMapBtn")
+        .addEventListener("click", function(){
+            map.removeLayer(defaultLayer);
+            map.addLayer(stadiaLayer);
+        })
